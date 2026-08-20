@@ -1,0 +1,1052 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio of Nandish Thaker, a content strategy, audience growth, editorial operations, and AI-enabled content leader based in Mumbai.">
+  <title>Nandish Thaker | Content Strategy & Audience Growth</title>
+  <style>
+    :root {
+      --ink: #16201c;
+      --muted: #5f6b66;
+      --line: #dce4df;
+      --paper: #fbfaf7;
+      --surface: #ffffff;
+      --sage: #e7f0e8;
+      --sage-strong: #2f6f59;
+      --teal: #0f7c80;
+      --clay: #a95334;
+      --mustard: #c09020;
+      --navy: #233b5d;
+      --shadow: 0 16px 42px rgba(22, 32, 28, 0.11);
+      --radius: 8px;
+      --max: 1160px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+      letter-spacing: 0;
+    }
+
+    a {
+      color: inherit;
+      text-decoration-color: rgba(47, 111, 89, 0.45);
+      text-underline-offset: 0.18em;
+    }
+
+    a:hover {
+      text-decoration-color: var(--sage-strong);
+    }
+
+    .skip-link {
+      position: absolute;
+      left: 16px;
+      top: -48px;
+      z-index: 10;
+      background: var(--ink);
+      color: #fff;
+      padding: 10px 14px;
+      border-radius: 4px;
+    }
+
+    .skip-link:focus {
+      top: 16px;
+    }
+
+    header {
+      background: linear-gradient(180deg, #ffffff 0%, var(--paper) 100%);
+      border-bottom: 1px solid var(--line);
+    }
+
+    nav {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 18px 0;
+    }
+
+    .brand {
+      font-weight: 800;
+      letter-spacing: 0;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+    }
+
+    .hero {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+      padding: 72px 0 54px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
+      gap: 44px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      color: var(--sage-strong);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 0 0 14px;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1 {
+      max-width: 12ch;
+      font-size: clamp(3.2rem, 8vw, 6.5rem);
+      line-height: 0.92;
+      letter-spacing: 0;
+      margin-bottom: 22px;
+    }
+
+    .hero-copy {
+      max-width: 740px;
+      font-size: clamp(1.12rem, 2.5vw, 1.46rem);
+      color: #35433d;
+      margin-bottom: 28px;
+    }
+
+    .hero-actions,
+    .contact-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 11px 16px;
+      border-radius: 6px;
+      border: 1px solid var(--ink);
+      background: var(--ink);
+      color: #fff;
+      font-weight: 750;
+      text-decoration: none;
+    }
+
+    .button.secondary {
+      background: transparent;
+      color: var(--ink);
+      border-color: var(--line);
+    }
+
+    .hero-panel {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 22px;
+    }
+
+    .signal {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 14px;
+      padding: 15px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .signal:last-child {
+      border-bottom: 0;
+    }
+
+    .signal-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-weight: 850;
+      color: #fff;
+      background: var(--sage-strong);
+    }
+
+    .signal:nth-child(2) .signal-mark {
+      background: var(--clay);
+    }
+
+    .signal:nth-child(3) .signal-mark {
+      background: var(--navy);
+    }
+
+    .signal strong {
+      display: block;
+      font-size: 1.02rem;
+      margin-bottom: 2px;
+    }
+
+    .signal span {
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    section {
+      padding: 70px 0;
+    }
+
+    .section-inner {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, 0.7fr) minmax(280px, 0.95fr);
+      gap: 36px;
+      align-items: start;
+      margin-bottom: 32px;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      line-height: 1.02;
+      letter-spacing: 0;
+      margin-bottom: 0;
+    }
+
+    .section-head p,
+    .lead {
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .metric,
+    .case-card,
+    .scope-card,
+    .fact-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+    }
+
+    .metric {
+      padding: 18px;
+      min-height: 160px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .metric .value {
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      line-height: 1;
+      font-weight: 850;
+      color: var(--ink);
+    }
+
+    .metric .label {
+      color: var(--muted);
+      margin-top: 12px;
+      font-size: 0.94rem;
+    }
+
+    .tag {
+      width: fit-content;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 4px 9px;
+      color: var(--muted);
+      font-size: 0.75rem;
+      font-weight: 750;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .scope-band {
+      background: #eef5ef;
+      border-block: 1px solid var(--line);
+    }
+
+    .scope-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .scope-card {
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.72);
+      min-height: 250px;
+    }
+
+    .scope-card .step {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--ink);
+      color: #fff;
+      font-weight: 850;
+      margin-bottom: 18px;
+    }
+
+    .scope-card h3 {
+      font-size: 1.12rem;
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+
+    .scope-card p {
+      color: var(--muted);
+      margin-bottom: 0;
+      font-size: 0.97rem;
+    }
+
+    .case-list {
+      display: grid;
+      gap: 22px;
+    }
+
+    .case-card {
+      overflow: hidden;
+    }
+
+    .case-top {
+      display: grid;
+      grid-template-columns: minmax(0, 0.85fr) minmax(300px, 0.75fr);
+      gap: 24px;
+      padding: 26px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .case-top h3 {
+      font-size: clamp(1.55rem, 3vw, 2.35rem);
+      line-height: 1.08;
+      margin-bottom: 14px;
+    }
+
+    .case-top p {
+      color: var(--muted);
+      margin-bottom: 0;
+    }
+
+    .case-body {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      border-bottom: 1px solid var(--line);
+    }
+
+    .case-body article {
+      padding: 22px;
+      border-right: 1px solid var(--line);
+    }
+
+    .case-body article:last-child {
+      border-right: 0;
+    }
+
+    .case-body h4,
+    .proof h4,
+    .fact-card h3 {
+      margin: 0 0 8px;
+      font-size: 0.94rem;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--sage-strong);
+    }
+
+    .case-body p,
+    .proof p,
+    .fact-card p {
+      color: var(--muted);
+      margin-bottom: 0;
+      font-size: 0.96rem;
+    }
+
+    .proof-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      padding: 20px 26px 26px;
+    }
+
+    .proof {
+      padding: 16px;
+      border-radius: 6px;
+      background: #f4f7f4;
+      border: 1px solid #e0e9e2;
+    }
+
+    .mini-chart {
+      min-height: 230px;
+      display: grid;
+      align-items: end;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #f7faf7;
+    }
+
+    .bar {
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      min-width: 0;
+      height: 190px;
+    }
+
+    .bar span:first-child {
+      display: block;
+      width: 100%;
+      min-height: 20px;
+      border-radius: 5px 5px 0 0;
+      background: var(--teal);
+    }
+
+    .bar:nth-child(2) span:first-child {
+      background: var(--mustard);
+    }
+
+    .bar:nth-child(3) span:first-child {
+      background: var(--clay);
+    }
+
+    .bar-label {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 0.78rem;
+      line-height: 1.2;
+    }
+
+    .bar strong {
+      display: block;
+      color: var(--ink);
+      font-size: 1rem;
+    }
+
+    .proof-note {
+      padding: 0 26px 26px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .facts-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .fact-card {
+      padding: 22px;
+      min-height: 210px;
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .skill-block {
+      border-top: 3px solid var(--sage-strong);
+      padding-top: 16px;
+    }
+
+    .skill-block:nth-child(2) {
+      border-color: var(--clay);
+    }
+
+    .skill-block:nth-child(3) {
+      border-color: var(--navy);
+    }
+
+    .skill-block:nth-child(4) {
+      border-color: var(--mustard);
+    }
+
+    .skill-block h3 {
+      font-size: 1rem;
+      margin-bottom: 8px;
+    }
+
+    .skill-block p {
+      color: var(--muted);
+      margin-bottom: 0;
+      font-size: 0.96rem;
+    }
+
+    .experience {
+      display: grid;
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    .role {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 22px;
+      background: var(--surface);
+      padding: 22px;
+    }
+
+    .role time {
+      color: var(--muted);
+      font-weight: 750;
+    }
+
+    .role h3 {
+      margin-bottom: 6px;
+      font-size: 1.1rem;
+    }
+
+    .role p {
+      color: var(--muted);
+      margin-bottom: 0;
+    }
+
+    .contact {
+      background: var(--ink);
+      color: #fff;
+    }
+
+    .contact .section-head p,
+    .contact a {
+      color: rgba(255, 255, 255, 0.78);
+    }
+
+    .contact .button {
+      background: #fff;
+      color: var(--ink);
+      border-color: #fff;
+    }
+
+    .contact .button.secondary {
+      background: transparent;
+      color: #fff;
+      border-color: rgba(255, 255, 255, 0.28);
+    }
+
+    footer {
+      padding: 24px 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    footer .section-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 980px) {
+      .hero,
+      .section-head,
+      .case-top {
+        grid-template-columns: 1fr;
+      }
+
+      .metrics-grid,
+      .scope-grid,
+      .case-body,
+      .proof-grid,
+      .facts-grid,
+      .skills {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .case-body article:nth-child(2) {
+        border-right: 0;
+      }
+
+      .case-body article {
+        border-bottom: 1px solid var(--line);
+      }
+
+      .case-body article:nth-last-child(-n+2) {
+        border-bottom: 0;
+      }
+    }
+
+    @media (max-width: 720px) {
+      nav {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .nav-links {
+        width: 100%;
+        overflow-x: auto;
+        padding-bottom: 4px;
+      }
+
+      .hero {
+        padding-top: 42px;
+      }
+
+      section {
+        padding: 52px 0;
+      }
+
+      .metrics-grid,
+      .scope-grid,
+      .case-body,
+      .proof-grid,
+      .facts-grid,
+      .skills,
+      .role {
+        grid-template-columns: 1fr;
+      }
+
+      .case-body article,
+      .case-body article:nth-child(2),
+      .case-body article:nth-last-child(-n+2) {
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .case-body article:last-child {
+        border-bottom: 0;
+      }
+
+      .hero-panel,
+      .case-top,
+      .proof-grid,
+      .proof-note {
+        padding-inline: 18px;
+      }
+
+      .mini-chart {
+        min-height: 210px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <nav aria-label="Primary">
+      <a class="brand" href="#top">Nandish Thaker</a>
+      <div class="nav-links">
+        <a href="#proof">Proof</a>
+        <a href="#scope">Scope</a>
+        <a href="#case-studies">Case Studies</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+    <div class="hero" id="top">
+      <div>
+        <p class="eyebrow">Content strategy | Audience growth | AI-enabled content</p>
+        <h1>Nandish Thaker</h1>
+        <p class="hero-copy">I build content and audience systems that convert editorial judgment into measurable business outcomes across sports, entertainment, digital media, and AI-enabled content quality.</p>
+        <div class="hero-actions">
+          <a class="button" href="mailto:nandishthaker.work@gmail.com">Email Nandish</a>
+          <a class="button secondary" href="https://www.linkedin.com/in/nandishtthaker">LinkedIn</a>
+        </div>
+      </div>
+      <aside class="hero-panel" aria-label="Portfolio positioning">
+        <div class="signal">
+          <div class="signal-mark">1</div>
+          <div>
+            <strong>Audience intelligence into strategy</strong>
+            <span>Search behavior, fan interest, editorial timing, and commercial opportunity turned into clear content bets.</span>
+          </div>
+        </div>
+        <div class="signal">
+          <div class="signal-mark">2</div>
+          <div>
+            <strong>Strategy into operating systems</strong>
+            <span>Content architecture, governance, team allocation, tracking sheets, SEO playbooks, and quality standards.</span>
+          </div>
+        </div>
+        <div class="signal">
+          <div class="signal-mark">3</div>
+          <div>
+            <strong>Systems into business outcomes</strong>
+            <span>Organic sessions, revenue contribution, audience engagement, efficiency, and repeatable growth models.</span>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="proof" aria-labelledby="proof-title">
+      <div class="section-inner">
+        <div class="section-head">
+          <h2 id="proof-title">Evidence-led proof points</h2>
+          <p>These numbers are treated as verified source metrics from the resumes, LinkedIn profile, and Notion case studies. They are not combined into misleading mixed-unit charts.</p>
+        </div>
+        <div class="metrics-grid">
+          <article class="metric">
+            <span class="tag">Verified metric</span>
+            <div>
+              <div class="value">61M</div>
+              <p class="label">Organic sessions in FY 2024-25 across Sportskeeda, Sportskeeda Wiki, and SoapCentral.</p>
+            </div>
+          </article>
+          <article class="metric">
+            <span class="tag">Verified metric</span>
+            <div>
+              <div class="value">INR 3Cr</div>
+              <p class="label">Annual revenue in FY 2024-25 tied to SEO-led audience growth and content strategy.</p>
+            </div>
+          </article>
+          <article class="metric">
+            <span class="tag">Verified metric</span>
+            <div>
+              <div class="value">60+</div>
+              <p class="label">Cross-functional team members across editorial, SEO, design, product, and operations.</p>
+            </div>
+          </article>
+          <article class="metric">
+            <span class="tag">Verified metric</span>
+            <div>
+              <div class="value">8,000+</div>
+              <p class="label">Indexed Wiki pages across seven categories within six months, supported by scalable systems.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="scope-band" id="scope" aria-labelledby="scope-title">
+      <div class="section-inner">
+        <div class="section-head">
+          <h2 id="scope-title">Increasing scope and leverage</h2>
+          <p>The career pattern is not more output for its own sake. It is a widening operating scope: from publishing and editorial ownership to systems, team leadership, business impact, and AI quality frameworks.</p>
+        </div>
+        <div class="scope-grid">
+          <article class="scope-card">
+            <span class="step">1</span>
+            <h3>Owned editorial performance</h3>
+            <p>Built entertainment coverage and digital publishing discipline at Mid-Day, using audience behavior, social formats, SEO, and partnerships to strengthen a high-performing vertical.</p>
+          </article>
+          <article class="scope-card">
+            <span class="step">2</span>
+            <h3>Created audience-led IP</h3>
+            <p>Conceptualised Jhakaas Awards around user behavior, owned the format and rollout, and turned an entertainment section into a stronger digital brand property.</p>
+          </article>
+          <article class="scope-card">
+            <span class="step">3</span>
+            <h3>Built repeatable growth systems</h3>
+            <p>At Sportskeeda, allocated writers, editors, SEO, and operations around scalable content architectures rather than isolated articles or campaigns.</p>
+          </article>
+          <article class="scope-card">
+            <span class="step">4</span>
+            <h3>Extended judgment into AI quality</h3>
+            <p>Applied editorial standards, rubrics, prompt evaluation, and human-in-the-loop review to AI-generated content across consulting engagements.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="case-studies" aria-labelledby="case-title">
+      <div class="section-inner">
+        <div class="section-head">
+          <h2 id="case-title">Case studies</h2>
+          <p>Two source-supported examples show how Nandish identified business opportunities, made editorial and operating decisions, influenced teams, allocated resources, and measured outcomes.</p>
+        </div>
+
+        <div class="case-list">
+          <article class="case-card">
+            <div class="case-top">
+              <div>
+                <p class="eyebrow">Sportskeeda | NFL Draft strategy</p>
+                <h3>Turning an untapped, high-CPM audience opportunity into a repeatable growth model</h3>
+                <p>The NFL Draft was identified as a search-led audience opportunity months before the event. The work centered on content architecture, resource allocation, SEO tracking, and readiness before demand spiked.</p>
+              </div>
+              <div class="mini-chart" aria-label="NFL sessions path from June-July baseline to season start to peak">
+                <div class="bar">
+                  <span style="height: 20%;"></span>
+                  <span class="bar-label"><strong>108K</strong>Jun-Jul monthly sessions</span>
+                </div>
+                <div class="bar">
+                  <span style="height: 45%;"></span>
+                  <span class="bar-label"><strong>250K</strong>Season start sessions</span>
+                </div>
+                <div class="bar">
+                  <span style="height: 100%;"></span>
+                  <span class="bar-label"><strong>550K</strong>Peak sessions</span>
+                </div>
+              </div>
+            </div>
+            <div class="case-body">
+              <article>
+                <h4>What he owned</h4>
+                <p>Built the content strategy from scratch for a small NFL vertical and turned the Draft into a planned organic growth opportunity.</p>
+              </article>
+              <article>
+                <h4>Key decisions</h4>
+                <p>Prioritised the top 300 searched prospects, built pillar pages with 5-6 supporting articles, and optimised for long-tail demand and Google Discover.</p>
+              </article>
+              <article>
+                <h4>Systems built</h4>
+                <p>Created daily progress tracking, weekly SERP tracking, interlinking structures, and real-time ranking and pageview review rhythms.</p>
+              </article>
+              <article>
+                <h4>Team leverage</h4>
+                <p>Scaled the operating team from himself plus two writers to one assistant content manager, eight writers, two editors, and one SEO analyst.</p>
+              </article>
+            </div>
+            <div class="proof-grid">
+              <div class="proof">
+                <h4>Output system</h4>
+                <p>1,500 articles prepared across prospect-focused pillar and support content.</p>
+              </div>
+              <div class="proof">
+                <h4>Revenue</h4>
+                <p>INR 3-4 lakh during the four Draft days and INR 50 lakh annual revenue contribution.</p>
+              </div>
+              <div class="proof">
+                <h4>Audience</h4>
+                <p>Sessions path: 108K monthly sessions to 250K season-start sessions to 550K peak sessions.</p>
+              </div>
+              <div class="proof">
+                <h4>Scale effect</h4>
+                <p>The model was replicated across NBA, MLB, NHL, and adopted by sister company Pro Football Network.</p>
+              </div>
+            </div>
+            <p class="proof-note">Clarification: this page uses the Notion-backed sessions path rather than the conflicting 70% or 250% traffic shorthand found in different resume versions.</p>
+          </article>
+
+          <article class="case-card">
+            <div class="case-top">
+              <div>
+                <p class="eyebrow">Mid-Day | Digital IP creation</p>
+                <h3>Building Jhakaas Awards into an audience-led entertainment property</h3>
+                <p>Mid-Day needed relevance in entertainment, not just more coverage. The strategy reframed audience debate around celebrity culture into a participatory IP that could travel across social, print, web, and celebrity fan communities.</p>
+              </div>
+              <div class="mini-chart" aria-label="Jhakaas Awards campaign metrics">
+                <div class="bar">
+                  <span style="height: 100%;"></span>
+                  <span class="bar-label"><strong>2.7M</strong>Votes in 33 days</span>
+                </div>
+                <div class="bar">
+                  <span style="height: 36%;"></span>
+                  <span class="bar-label"><strong>965K</strong>Social reach</span>
+                </div>
+                <div class="bar">
+                  <span style="height: 22%;"></span>
+                  <span class="bar-label"><strong>2,000+</strong>Tweets</span>
+                </div>
+              </div>
+            </div>
+            <div class="case-body">
+              <article>
+                <h4>What he owned</h4>
+                <p>Conceptualised and led Mid-Day's first digital entertainment IP end to end, from category design to campaign execution.</p>
+              </article>
+              <article>
+                <h4>Key decisions</h4>
+                <p>Rejected conventional award categories and built 10 audience-rooted categories based on what readers already debated and shared.</p>
+              </article>
+              <article>
+                <h4>Systems built</h4>
+                <p>Ran a phased nomination and voting process, built an in-house microsite, and used IP-based limits to reduce spam without suppressing participation.</p>
+              </article>
+              <article>
+                <h4>Team leverage</h4>
+                <p>Led a focused team of five writers, two social producers, one video editor, one deputy editor, and himself with zero paid promotion.</p>
+              </article>
+            </div>
+            <div class="proof-grid">
+              <div class="proof">
+                <h4>Engagement</h4>
+                <p>2.7 million votes over 33 days, plus 2,000+ tweets and 965K social reach.</p>
+              </div>
+              <div class="proof">
+                <h4>Efficiency</h4>
+                <p>Generated entirely through in-house channels, group websites, print tie-ins, PR, and celebrity fan buzz.</p>
+              </div>
+              <div class="proof">
+                <h4>Business effect</h4>
+                <p>Entertainment shifted from a supporting section to a stronger sales and revenue strategy pillar.</p>
+              </div>
+              <div class="proof">
+                <h4>Durability</h4>
+                <p>The property ran annually for three years and competitors attempted to copy the format.</p>
+              </div>
+            </div>
+            <p class="proof-note">Clarification: vote count, reach, tweet volume, and engagement lift are shown as separate measures because they describe different outcomes.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="judgment-title">
+      <div class="section-inner">
+        <div class="section-head">
+          <h2 id="judgment-title">How the work creates leverage</h2>
+          <p>The strongest pattern across the source material is judgment converted into operating leverage: choosing where to play, designing the system, aligning teams, and measuring business impact.</p>
+        </div>
+        <div class="facts-grid">
+          <article class="fact-card">
+            <h3>Business problem solving</h3>
+            <p>Identified high-CPM and high-interest spaces, turned weak or underused verticals into structured content opportunities, and linked editorial choices to revenue or audience outcomes.</p>
+          </article>
+          <article class="fact-card">
+            <h3>Resource allocation</h3>
+            <p>Matched team structure to opportunity size, moving from small direct execution teams to cross-functional groups with writers, editors, SEO, design, product, and operations.</p>
+          </article>
+          <article class="fact-card">
+            <h3>Measurement discipline</h3>
+            <p>Used GA4, Google Search Console, SEMrush, SimilarWeb, SERP tracking, pageview reviews, and business reviews to monitor outcomes and adjust priorities.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="skills-title">
+      <div class="section-inner">
+        <div class="section-head">
+          <h2 id="skills-title">Capabilities</h2>
+          <p>Capabilities are grouped by how they show up in the work: strategy, leadership, AI-enabled quality, and analytics-backed operations.</p>
+        </div>
+        <div class="skills">
+          <article class="skill-block">
+            <h3>Strategy and growth</h3>
+            <p>Content strategy, editorial strategy, audience strategy, brand strategy, content ecosystems, thought leadership, cross-functional collaboration.</p>
+          </article>
+          <article class="skill-block">
+            <h3>Leadership and delivery</h3>
+            <p>Editorial leadership, team leadership, agency and vendor management, content governance, creative production coordination, process optimisation.</p>
+          </article>
+          <article class="skill-block">
+            <h3>AI and content quality</h3>
+            <p>AI-assisted content workflows, prompt engineering, AI content evaluation, editorial quality frameworks, ChatGPT, Claude, Gemini, Microsoft Copilot.</p>
+          </article>
+          <article class="skill-block">
+            <h3>Platforms and analytics</h3>
+            <p>GA4, Google Search Console, SEMrush, SimilarWeb, WordPress, Drupal, marketing operations, content operations, content performance analytics.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" aria-labelledby="experience-title">
+      <div class="section-inner">
+        <div class="section-head">
+          <h2 id="experience-title">Experience</h2>
+          <p>Dates reflect the clarified source record, including updated Mercor and micro1 dates.</p>
+        </div>
+        <div class="experience">
+          <article class="role">
+            <time>Nov 2025 - May 2026</time>
+            <div>
+              <h3>AI Content Quality Consultant - micro1</h3>
+              <p>Evaluated AI-generated content across media and entertainment domains; designed quality rubrics, prompt assessment methods, and structured review approaches for consistency and reliability.</p>
+            </div>
+          </article>
+          <article class="role">
+            <time>Nov 2025 - Mar 2026</time>
+            <div>
+              <h3>AI Response Evaluation Consultant - Mercor</h3>
+              <p>Evaluated AI-generated content across sports and finance domains, assessing factual accuracy, contextual relevance, reasoning quality, user intent alignment, and response preference.</p>
+            </div>
+          </article>
+          <article class="role">
+            <time>Apr 2022 - Dec 2025</time>
+            <div>
+              <h3>Senior Content Manager - Absolute Sports Pvt Ltd</h3>
+              <p>Led audience growth and content strategy across Sportskeeda, Sportskeeda Wiki, and SoapCentral, managing 20+ verticals, a 60+ member cross-functional team, and FY 2024-25 outcomes of 61M organic sessions and INR 3 crore annual revenue.</p>
+            </div>
+          </article>
+          <article class="role">
+            <time>Jul 2021 - Feb 2022</time>
+            <div>
+              <h3>Deputy Editor - Chief Manager - SpotBoye.com, 9X Media Pvt Ltd</h3>
+              <p>Led digital editorial operations across celebrity, entertainment, and pop-culture content with a focus on audience engagement and content performance.</p>
+            </div>
+          </article>
+          <article class="role">
+            <time>Oct 2007 - Jun 2021</time>
+            <div>
+              <h3>Entertainment Head (Digital) / Deputy Editor - Chief Manager - Mid-Day Infomedia</h3>
+              <p>Led digital publishing and content strategy for the Entertainment vertical, built partnerships with celebrities and studios, launched Jhakaas Awards, and received Shining Star and Stellar Gold recognition.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="section-inner">
+        <div class="section-head">
+          <h2 id="contact-title">For content, growth, and AI-enabled editorial roles</h2>
+          <p>Open to Content Lead, Content/Business Intelligence, Growth Marketing, Strategy, and AI-enabled content quality opportunities where audience intelligence and operating systems matter.</p>
+        </div>
+        <div class="contact-row">
+          <a class="button" href="mailto:nandishthaker.work@gmail.com">nandishthaker.work@gmail.com</a>
+          <a class="button secondary" href="tel:+919930693535">+91 99306 93535</a>
+          <a class="button secondary" href="https://www.linkedin.com/in/nandishtthaker">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="section-inner">
+      <span>Nandish Thaker | Mumbai, India</span>
+      <span>Standalone portfolio built from resume, LinkedIn, and Notion case-study sources.</span>
+    </div>
+  </footer>
+
+  <script>
+    const navLinks = document.querySelectorAll('nav a[href^="#"]');
+    navLinks.forEach((link) => {
+      link.addEventListener('click', () => {
+        navLinks.forEach((item) => item.removeAttribute('aria-current'));
+        link.setAttribute('aria-current', 'page');
+      });
+    });
+  </script>
+</body>
+</html>
