@@ -29,6 +29,7 @@
 
     html {
       scroll-behavior: smooth;
+      scroll-padding-top: 108px;
     }
 
     body {
@@ -54,7 +55,7 @@
       position: absolute;
       left: 16px;
       top: -48px;
-      z-index: 10;
+      z-index: 30;
       background: var(--ink);
       color: #fff;
       padding: 10px 14px;
@@ -67,17 +68,28 @@
 
     header {
       background: linear-gradient(180deg, #ffffff 0%, var(--paper) 100%);
-      border-bottom: 1px solid var(--line);
+      padding-top: 86px;
     }
 
     nav {
+      position: fixed;
+      top: 18px;
+      left: 50%;
+      z-index: 20;
       width: min(var(--max), calc(100% - 32px));
-      margin: 0 auto;
+      margin: 0;
+      transform: translateX(-50%);
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 24px;
-      padding: 18px 0;
+      padding: 14px 18px;
+      background: rgba(255, 255, 255, 0.86);
+      border: 1px solid rgba(220, 228, 223, 0.86);
+      border-radius: 999px;
+      box-shadow: 0 14px 38px rgba(22, 32, 28, 0.12);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
     }
 
     .brand {
@@ -95,6 +107,9 @@
     }
 
     .nav-links a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
       text-decoration: none;
     }
 
@@ -145,6 +160,18 @@
       flex-wrap: wrap;
       gap: 12px;
       align-items: center;
+    }
+
+    .availability {
+      display: inline-flex;
+      width: fit-content;
+      margin: 0 0 16px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: var(--sage);
+      color: var(--sage-strong);
+      font-size: 0.92rem;
+      font-weight: 800;
     }
 
     .button {
@@ -484,6 +511,43 @@
       gap: 14px;
     }
 
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .testimonial {
+      min-height: 250px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+    }
+
+    .testimonial blockquote {
+      margin: 0 0 24px;
+      color: #314039;
+      font-size: 1.05rem;
+      line-height: 1.45;
+    }
+
+    .testimonial cite {
+      color: var(--muted);
+      font-style: normal;
+      font-size: 0.93rem;
+    }
+
+    .testimonial strong {
+      display: block;
+      color: var(--ink);
+      font-size: 1rem;
+      margin-bottom: 3px;
+    }
+
     .skill-block {
       border-top: 3px solid var(--sage-strong);
       padding-top: 16px;
@@ -591,6 +655,7 @@
       .case-body,
       .proof-grid,
       .facts-grid,
+      .testimonials-grid,
       .skills {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
@@ -609,9 +674,19 @@
     }
 
     @media (max-width: 720px) {
+      html {
+        scroll-padding-top: 148px;
+      }
+
+      header {
+        padding-top: 132px;
+      }
+
       nav {
         align-items: flex-start;
         flex-direction: column;
+        border-radius: 18px;
+        gap: 10px;
       }
 
       .nav-links {
@@ -633,6 +708,7 @@
       .case-body,
       .proof-grid,
       .facts-grid,
+      .testimonials-grid,
       .skills,
       .role {
         grid-template-columns: 1fr;
@@ -677,6 +753,7 @@
         <a href="#proof">Proof</a>
         <a href="#scope">Scope</a>
         <a href="#case-studies">Case Studies</a>
+        <a href="#testimonials">Testimonials</a>
         <a href="#experience">Experience</a>
         <a href="#contact">Contact</a>
       </div>
@@ -685,6 +762,7 @@
       <div>
         <p class="eyebrow">Content strategy | Audience growth | AI-enabled content</p>
         <h1>Nandish Thaker</h1>
+        <p class="availability">Currently open to new opportunities.</p>
         <p class="hero-copy">I build content and audience systems that convert editorial judgment into measurable business outcomes across sports, entertainment, digital media, and AI-enabled content quality.</p>
         <div class="hero-actions">
           <a class="button" href="mailto:nandishthaker.work@gmail.com">Email Nandish</a>
@@ -722,32 +800,27 @@
       <div class="section-inner">
         <div class="section-head">
           <h2 id="proof-title">Evidence-led proof points</h2>
-          <p>These numbers are treated as verified source metrics from the resumes, LinkedIn profile, and Notion case studies. They are not combined into misleading mixed-unit charts.</p>
         </div>
         <div class="metrics-grid">
           <article class="metric">
-            <span class="tag">Verified metric</span>
             <div>
               <div class="value">61M</div>
               <p class="label">Organic sessions in FY 2024-25 across Sportskeeda, Sportskeeda Wiki, and SoapCentral.</p>
             </div>
           </article>
           <article class="metric">
-            <span class="tag">Verified metric</span>
             <div>
               <div class="value">INR 3Cr</div>
               <p class="label">Annual revenue in FY 2024-25 tied to SEO-led audience growth and content strategy.</p>
             </div>
           </article>
           <article class="metric">
-            <span class="tag">Verified metric</span>
             <div>
               <div class="value">60+</div>
               <p class="label">Cross-functional team members across editorial, SEO, design, product, and operations.</p>
             </div>
           </article>
           <article class="metric">
-            <span class="tag">Verified metric</span>
             <div>
               <div class="value">8,000+</div>
               <p class="label">Indexed Wiki pages across seven categories within six months, supported by scalable systems.</p>
@@ -761,28 +834,27 @@
       <div class="section-inner">
         <div class="section-head">
           <h2 id="scope-title">Increasing scope and leverage</h2>
-          <p>The career pattern is not more output for its own sake. It is a widening operating scope: from publishing and editorial ownership to systems, team leadership, business impact, and AI quality frameworks.</p>
         </div>
         <div class="scope-grid">
           <article class="scope-card">
             <span class="step">1</span>
             <h3>Owned editorial performance</h3>
-            <p>Built entertainment coverage and digital publishing discipline at Mid-Day, using audience behavior, social formats, SEO, and partnerships to strengthen a high-performing vertical.</p>
+            <p>I built entertainment coverage and digital publishing discipline at Mid-Day, using audience behavior, social formats, SEO, and partnerships to strengthen a high-performing vertical.</p>
           </article>
           <article class="scope-card">
             <span class="step">2</span>
             <h3>Created audience-led IP</h3>
-            <p>Conceptualised Jhakaas Awards around user behavior, owned the format and rollout, and turned an entertainment section into a stronger digital brand property.</p>
+            <p>I conceptualised Jhakaas Awards around user behavior, owned the format and rollout, and turned an entertainment section into a stronger digital brand property.</p>
           </article>
           <article class="scope-card">
             <span class="step">3</span>
             <h3>Built repeatable growth systems</h3>
-            <p>At Sportskeeda, allocated writers, editors, SEO, and operations around scalable content architectures rather than isolated articles or campaigns.</p>
+            <p>At Sportskeeda, I allocated writers, editors, SEO, and operations around scalable content architectures rather than isolated articles or campaigns.</p>
           </article>
           <article class="scope-card">
             <span class="step">4</span>
             <h3>Extended judgment into AI quality</h3>
-            <p>Applied editorial standards, rubrics, prompt evaluation, and human-in-the-loop review to AI-generated content across consulting engagements.</p>
+            <p>I applied editorial standards, rubrics, prompt evaluation, and human-in-the-loop review to AI-generated content across consulting engagements.</p>
           </article>
         </div>
       </div>
@@ -792,7 +864,6 @@
       <div class="section-inner">
         <div class="section-head">
           <h2 id="case-title">Case studies</h2>
-          <p>Two source-supported examples show how Nandish identified business opportunities, made editorial and operating decisions, influenced teams, allocated resources, and measured outcomes.</p>
         </div>
 
         <div class="case-list">
@@ -801,7 +872,7 @@
               <div>
                 <p class="eyebrow">Sportskeeda | NFL Draft strategy</p>
                 <h3>Turning an untapped, high-CPM audience opportunity into a repeatable growth model</h3>
-                <p>The NFL Draft was identified as a search-led audience opportunity months before the event. The work centered on content architecture, resource allocation, SEO tracking, and readiness before demand spiked.</p>
+                <p>I identified the NFL Draft as a search-led audience opportunity months before the event, then built the operating plan around content architecture, resource allocation, SEO tracking, and readiness before demand spiked.</p>
               </div>
               <div class="mini-chart" aria-label="NFL sessions path from June-July baseline to season start to peak">
                 <div class="bar">
@@ -810,30 +881,30 @@
                 </div>
                 <div class="bar">
                   <span style="height: 45%;"></span>
-                  <span class="bar-label"><strong>250K</strong>Season start sessions</span>
+                  <span class="bar-label"><strong>250K</strong>Aug-Sep season start sessions</span>
                 </div>
                 <div class="bar">
                   <span style="height: 100%;"></span>
-                  <span class="bar-label"><strong>550K</strong>Peak sessions</span>
+                  <span class="bar-label"><strong>550K</strong>Jan-Feb peak sessions</span>
                 </div>
               </div>
             </div>
             <div class="case-body">
               <article>
-                <h4>What he owned</h4>
-                <p>Built the content strategy from scratch for a small NFL vertical and turned the Draft into a planned organic growth opportunity.</p>
+                <h4>What I owned</h4>
+                <p>I built the content strategy from scratch for a small NFL vertical and turned the Draft into a planned organic growth opportunity.</p>
               </article>
               <article>
                 <h4>Key decisions</h4>
-                <p>Prioritised the top 300 searched prospects, built pillar pages with 5-6 supporting articles, and optimised for long-tail demand and Google Discover.</p>
+                <p>I prioritised the top 300 searched prospects, built pillar pages with 5-6 supporting articles, and optimised for long-tail demand and Google Discover.</p>
               </article>
               <article>
                 <h4>Systems built</h4>
-                <p>Created daily progress tracking, weekly SERP tracking, interlinking structures, and real-time ranking and pageview review rhythms.</p>
+                <p>I created daily progress tracking, weekly SERP tracking, interlinking structures, and real-time ranking and pageview review rhythms.</p>
               </article>
               <article>
                 <h4>Team leverage</h4>
-                <p>Scaled the operating team from himself plus two writers to one assistant content manager, eight writers, two editors, and one SEO analyst.</p>
+                <p>I scaled the operating team from myself plus two writers to one assistant content manager, eight writers, two editors, and one SEO analyst.</p>
               </article>
             </div>
             <div class="proof-grid">
@@ -847,14 +918,13 @@
               </div>
               <div class="proof">
                 <h4>Audience</h4>
-                <p>Sessions path: 108K monthly sessions to 250K season-start sessions to 550K peak sessions.</p>
+                <p>Sessions path: 108K Jun-Jul monthly sessions to 250K Aug-Sep season-start sessions to 550K Jan-Feb peak sessions.</p>
               </div>
               <div class="proof">
                 <h4>Scale effect</h4>
-                <p>The model was replicated across NBA, MLB, NHL, and adopted by sister company Pro Football Network.</p>
+                <p>I built a model that was later replicated across NBA, MLB, NHL, and adopted by sister company Pro Football Network.</p>
               </div>
             </div>
-            <p class="proof-note">Clarification: this page uses the Notion-backed sessions path rather than the conflicting 70% or 250% traffic shorthand found in different resume versions.</p>
           </article>
 
           <article class="case-card">
@@ -862,7 +932,7 @@
               <div>
                 <p class="eyebrow">Mid-Day | Digital IP creation</p>
                 <h3>Building Jhakaas Awards into an audience-led entertainment property</h3>
-                <p>Mid-Day needed relevance in entertainment, not just more coverage. The strategy reframed audience debate around celebrity culture into a participatory IP that could travel across social, print, web, and celebrity fan communities.</p>
+                <p>I saw that Mid-Day needed relevance in entertainment, not just more coverage, so I reframed audience debate around celebrity culture into a participatory IP that could travel across social, print, web, and celebrity fan communities.</p>
               </div>
               <div class="mini-chart" aria-label="Jhakaas Awards campaign metrics">
                 <div class="bar">
@@ -881,20 +951,20 @@
             </div>
             <div class="case-body">
               <article>
-                <h4>What he owned</h4>
-                <p>Conceptualised and led Mid-Day's first digital entertainment IP end to end, from category design to campaign execution.</p>
+                <h4>What I owned</h4>
+                <p>I conceptualised and led Mid-Day's first digital entertainment IP end to end, from category design to campaign execution.</p>
               </article>
               <article>
                 <h4>Key decisions</h4>
-                <p>Rejected conventional award categories and built 10 audience-rooted categories based on what readers already debated and shared.</p>
+                <p>I rejected conventional award categories and built 10 audience-rooted categories based on what readers already debated and shared.</p>
               </article>
               <article>
                 <h4>Systems built</h4>
-                <p>Ran a phased nomination and voting process, built an in-house microsite, and used IP-based limits to reduce spam without suppressing participation.</p>
+                <p>I ran a phased nomination and voting process, built an in-house microsite, and used IP-based limits to reduce spam without suppressing participation.</p>
               </article>
               <article>
                 <h4>Team leverage</h4>
-                <p>Led a focused team of five writers, two social producers, one video editor, one deputy editor, and himself with zero paid promotion.</p>
+                <p>I led a focused team of five writers, two social producers, one video editor, one deputy editor, and myself with zero paid promotion.</p>
               </article>
             </div>
             <div class="proof-grid">
@@ -912,10 +982,9 @@
               </div>
               <div class="proof">
                 <h4>Durability</h4>
-                <p>The property ran annually for three years and competitors attempted to copy the format.</p>
+                <p>I helped establish a property that ran annually for three years and was later copied by competitors.</p>
               </div>
             </div>
-            <p class="proof-note">Clarification: vote count, reach, tweet volume, and engagement lift are shown as separate measures because they describe different outcomes.</p>
           </article>
         </div>
       </div>
@@ -925,20 +994,19 @@
       <div class="section-inner">
         <div class="section-head">
           <h2 id="judgment-title">How the work creates leverage</h2>
-          <p>The strongest pattern across the source material is judgment converted into operating leverage: choosing where to play, designing the system, aligning teams, and measuring business impact.</p>
         </div>
         <div class="facts-grid">
           <article class="fact-card">
             <h3>Business problem solving</h3>
-            <p>Identified high-CPM and high-interest spaces, turned weak or underused verticals into structured content opportunities, and linked editorial choices to revenue or audience outcomes.</p>
+            <p>I identify high-CPM and high-interest spaces, turn weak or underused verticals into structured content opportunities, and link editorial choices to revenue or audience outcomes.</p>
           </article>
           <article class="fact-card">
             <h3>Resource allocation</h3>
-            <p>Matched team structure to opportunity size, moving from small direct execution teams to cross-functional groups with writers, editors, SEO, design, product, and operations.</p>
+            <p>I match team structure to opportunity size, moving from small direct execution teams to cross-functional groups with writers, editors, SEO, design, product, and operations.</p>
           </article>
           <article class="fact-card">
             <h3>Measurement discipline</h3>
-            <p>Used GA4, Google Search Console, SEMrush, SimilarWeb, SERP tracking, pageview reviews, and business reviews to monitor outcomes and adjust priorities.</p>
+            <p>I use GA4, Google Search Console, SEMrush, SimilarWeb, SERP tracking, pageview reviews, and business reviews to monitor outcomes and adjust priorities.</p>
           </article>
         </div>
       </div>
@@ -948,7 +1016,7 @@
       <div class="section-inner">
         <div class="section-head">
           <h2 id="skills-title">Capabilities</h2>
-          <p>Capabilities are grouped by how they show up in the work: strategy, leadership, AI-enabled quality, and analytics-backed operations.</p>
+          <p>I bring together strategy, leadership, AI-enabled quality, and analytics-backed operations.</p>
         </div>
         <div class="skills">
           <article class="skill-block">
@@ -975,43 +1043,64 @@
       <div class="section-inner">
         <div class="section-head">
           <h2 id="experience-title">Experience</h2>
-          <p>Dates reflect the clarified source record, including updated Mercor and micro1 dates.</p>
         </div>
         <div class="experience">
           <article class="role">
             <time>Nov 2025 - May 2026</time>
             <div>
               <h3>AI Content Quality Consultant - micro1</h3>
-              <p>Evaluated AI-generated content across media and entertainment domains; designed quality rubrics, prompt assessment methods, and structured review approaches for consistency and reliability.</p>
+              <p>I evaluated AI-generated content across media and entertainment domains; designed quality rubrics, prompt assessment methods, and structured review approaches for consistency and reliability.</p>
             </div>
           </article>
           <article class="role">
             <time>Nov 2025 - Mar 2026</time>
             <div>
               <h3>AI Response Evaluation Consultant - Mercor</h3>
-              <p>Evaluated AI-generated content across sports and finance domains, assessing factual accuracy, contextual relevance, reasoning quality, user intent alignment, and response preference.</p>
+              <p>I evaluated AI-generated content across sports and finance domains, assessing factual accuracy, contextual relevance, reasoning quality, user intent alignment, and response preference.</p>
             </div>
           </article>
           <article class="role">
             <time>Apr 2022 - Dec 2025</time>
             <div>
               <h3>Senior Content Manager - Absolute Sports Pvt Ltd</h3>
-              <p>Led audience growth and content strategy across Sportskeeda, Sportskeeda Wiki, and SoapCentral, managing 20+ verticals, a 60+ member cross-functional team, and FY 2024-25 outcomes of 61M organic sessions and INR 3 crore annual revenue.</p>
+              <p>I led audience growth and content strategy across Sportskeeda, Sportskeeda Wiki, and SoapCentral, managing 20+ verticals, a 60+ member cross-functional team, and FY 2024-25 outcomes of 61M organic sessions and INR 3 crore annual revenue.</p>
             </div>
           </article>
           <article class="role">
             <time>Jul 2021 - Feb 2022</time>
             <div>
               <h3>Deputy Editor - Chief Manager - SpotBoye.com, 9X Media Pvt Ltd</h3>
-              <p>Led digital editorial operations across celebrity, entertainment, and pop-culture content with a focus on audience engagement and content performance.</p>
+              <p>I led digital editorial operations across celebrity, entertainment, and pop-culture content with a focus on audience engagement and content performance.</p>
             </div>
           </article>
           <article class="role">
             <time>Oct 2007 - Jun 2021</time>
             <div>
               <h3>Entertainment Head (Digital) / Deputy Editor - Chief Manager - Mid-Day Infomedia</h3>
-              <p>Led digital publishing and content strategy for the Entertainment vertical, built partnerships with celebrities and studios, launched Jhakaas Awards, and received Shining Star and Stellar Gold recognition.</p>
+              <p>I led digital publishing and content strategy for the Entertainment vertical, built partnerships with celebrities and studios, launched Jhakaas Awards, and received Shining Star and Stellar Gold recognition.</p>
             </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" aria-labelledby="testimonials-title">
+      <div class="section-inner">
+        <div class="section-head">
+          <h2 id="testimonials-title">Testimonials</h2>
+        </div>
+        <div class="testimonials-grid">
+          <article class="testimonial">
+            <blockquote>"A quick learner, highly tech savvy, and an effective manager who leads teams with clarity and responsibility."</blockquote>
+            <cite><strong>Tanmoy Mitra</strong>Senior Editor, The Times Group<br>Managed me for 8 years at Mid-Day</cite>
+          </article>
+          <article class="testimonial">
+            <blockquote>"His leadership and the way he managed his team stood out to me while we worked on AOP plans for major US sports."</blockquote>
+            <cite><strong>Saurav Mishra</strong>SEO Manager<br>Worked with me at Sportskeeda</cite>
+          </article>
+          <article class="testimonial">
+            <blockquote>"Works intuitively, executes plans to perfection, and has a no-nonsense attitude that should take him far."</blockquote>
+            <cite><strong>Lindsay Pereira</strong>Content, Communications & Digital Strategy<br>Managed me for 2 years at Mid-Day</cite>
           </article>
         </div>
       </div>
@@ -1025,7 +1114,6 @@
         </div>
         <div class="contact-row">
           <a class="button" href="mailto:nandishthaker.work@gmail.com">nandishthaker.work@gmail.com</a>
-          <a class="button secondary" href="tel:+919930693535">+91 99306 93535</a>
           <a class="button secondary" href="https://www.linkedin.com/in/nandishtthaker">LinkedIn</a>
         </div>
       </div>
@@ -1035,7 +1123,6 @@
   <footer>
     <div class="section-inner">
       <span>Nandish Thaker | Mumbai, India</span>
-      <span>Standalone portfolio built from resume, LinkedIn, and Notion case-study sources.</span>
     </div>
   </footer>
 
