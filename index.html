@@ -460,9 +460,12 @@
     .bar {
       display: flex;
       flex-direction: column;
-      justify-content: end;
       min-width: 0;
+    }
+    .bar-track {
       height: 190px;
+      display: flex;
+      align-items: flex-end;
     }
 
     .bar span:first-child {
@@ -882,15 +885,15 @@
               </div>
               <div class="mini-chart" aria-label="NFL sessions path from June-July baseline to season start to peak">
                 <div class="bar">
-                  <span style="height: 20%;"></span>
+                  <div class="bar-track"><span style="height: 20%;"></span></div>
                   <span class="bar-label"><strong>108K</strong>Jun-Jul monthly sessions</span>
                 </div>
                 <div class="bar">
-                  <span style="height: 45%;"></span>
+                  <div class="bar-track"><span style="height: 45%;"></span></div>
                   <span class="bar-label"><strong>250K</strong>Aug-Sep season start sessions</span>
                 </div>
                 <div class="bar">
-                  <span style="height: 100%;"></span>
+                  <div class="bar-track"><span style="height: 100%;"></span></div>
                   <span class="bar-label"><strong>550K</strong>Jan-Feb peak season sessions</span>
                 </div>
               </div>
@@ -942,15 +945,15 @@
               </div>
               <div class="mini-chart" aria-label="Jhakaas Awards campaign metrics">
                 <div class="bar">
-                  <span style="height: 100%;"></span>
+                  <div class="bar-track"><span style="height: 100%;"></span></div>
                   <span class="bar-label"><strong>2.7M</strong>Votes in 33 days</span>
                 </div>
                 <div class="bar">
-                  <span style="height: 36%;"></span>
+                  <div class="bar-track"><span style="height: 36%;"></span></div>
                   <span class="bar-label"><strong>965K</strong>Social reach</span>
                 </div>
                 <div class="bar">
-                  <span style="height: 22%;"></span>
+                  <div class="bar-track"><span style="height: 22%;"></span></div>
                   <span class="bar-label"><strong>2,000+</strong>Tweets</span>
                 </div>
               </div>
